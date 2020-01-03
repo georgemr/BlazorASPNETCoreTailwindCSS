@@ -1,16 +1,18 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
-    <NavMenu />
-</div>
-
-<div class="main">
-    <div class="top-row px-4 auth">
-        <LoginDisplay />
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+<div class="px-2 h-screen flex">
+    <div class="bg-indigo-900 text-purple-100 flex-none w-64 pb-6 block">
+        <NavMenu />
     </div>
 
-    <div class="content px-4">
-        @Body
+    <div class="flex-1 flex flex-col bg-white overflow-hidden">
+        <div class="font-semibold text-indigo-900 border-b flex items-center px-6 py-4">
+            <LoginDisplay />
+            <a class="hover:text-purple-400" href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <div class="px-6 py-4 flex-1">
+            @Body
+        </div>
     </div>
 </div>
